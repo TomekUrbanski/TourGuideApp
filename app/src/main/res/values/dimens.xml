@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">80dp</dimen>
+    <dimen name="marging_map">6dp</dimen>
+    <dimen name="padding_text_container">16dp</dimen>
+</resources>
