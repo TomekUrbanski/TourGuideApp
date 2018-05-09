@@ -9,4 +9,13 @@
     <string name="name_activity4">Attractions</string>
     <string name="lead_to">lead to</string>
     <string name="information">information</string>
+    <string name="toast_msg_listClick">Choose between -lead to- and -information-</string>
+    <string name="luna_park">Luna Park</string>
+    <string name="ballon_flight">Touring balloon flight</string>
+    <string name="zoo">Zoo</string>
+    <string name="bungee_jump">Bungee jumping</string>
+    <string name="m_JanaPawłaII">Museum Jana Pawła II</string>
+    <string name="m_poniatowskich">Museum Poniatowskich</string>
+    <string name="m_polish_jews">Museum of Polish Jews</string>
+    <string name="m_warsaw_uprising">Museum Warsaw uprising</string>
 </resources>

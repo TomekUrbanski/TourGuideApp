@@ -32,31 +32,31 @@ public class MuseumFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View places_list = inflater.inflate(R.layout.fragment_list, container, false);
 
-        ImageView map = rootView.findViewById(R.id.map);
+        ImageView map = places_list.findViewById(R.id.map);
         map.setImageResource(R.drawable.map_museum);
 
 
         ArrayList<Place> place = new ArrayList<Place>();
-        place.add(new Place("Museum Jana Pawła II", "ul. Wojska Polskeigo 33", R.drawable.mon1));
-        place.add(new Place("Museum Poniatowskich ", "ul. Uszczerbku 2", R.drawable.mon2));
-        place.add(new Place("Museum Żydów polskich ", "ul. Maduleńskiego 120", R.drawable.mon3));
-        place.add(new Place("Museum Powstania Warszawskiego", "ul. Gerdorobiana 1c", R.drawable.mon4));
+        place.add(new Place(getString(R.string.m_JanaPawłaII), "ul. Wojska Polskeigo 33", R.drawable.mon1));
+        place.add(new Place(getString(R.string.m_poniatowskich), "ul. Uszczerbku 2", R.drawable.mon2));
+        place.add(new Place(getString(R.string.m_polish_jews), "ul. Maduleńskiego 120", R.drawable.mon3));
+        place.add(new Place(getString(R.string.m_warsaw_uprising), "ul. Gerdorobiana 1c", R.drawable.mon4));
 
         final PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
-        final ListView listView = rootView.findViewById(R.id.list);
+        final ListView listView = places_list.findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                Toast.makeText(getContext(), "Choose between -lead to- and -information-", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.toast_msg_listClick, Toast.LENGTH_SHORT).show();
             }
         });
 
-        return rootView;
+        return places_list;
     }
 
 }

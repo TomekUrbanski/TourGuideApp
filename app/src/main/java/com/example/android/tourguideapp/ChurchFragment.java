@@ -29,9 +29,9 @@ public class ChurchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View places_list = inflater.inflate(R.layout.fragment_list, container, false);
 
-        ImageView map = rootView.findViewById(R.id.map);
+        ImageView map = places_list.findViewById(R.id.map);
         map.setImageResource(R.drawable.map_church);
 
         ArrayList<Place> place = new ArrayList<Place>();
@@ -41,18 +41,18 @@ public class ChurchFragment extends Fragment {
         place.add(new Place("Ewangelicko-Augsburski", "ul. Gromu 250", R.drawable.church4));
 
         PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
-        ListView listView = rootView.findViewById(R.id.list);
+        ListView listView = places_list.findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                Toast.makeText(getContext(), "Choose between -lead to- and -information-", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.toast_msg_listClick, Toast.LENGTH_SHORT).show();
             }
         });
 
-        return rootView;
+        return places_list;
     }
 
 }
