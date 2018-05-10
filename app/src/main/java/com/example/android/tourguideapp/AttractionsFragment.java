@@ -35,10 +35,10 @@ public class AttractionsFragment extends Fragment {
         map.setImageResource(R.drawable.map_attractions);
 
         ArrayList<Place> place = new ArrayList<Place>();
-        place.add(new Place(getString(R.string.luna_park), "ul. Gałgana Grzegorzka 1", R.drawable.atr1));
-        place.add(new Place(getString(R.string.ballon_flight), "Most Grunwaldzki 2", R.drawable.atr2));
-        place.add(new Place(getString(R.string.zoo), "ul Pawia 8 / ul. Żurawia 5", R.drawable.atr3));
-        place.add(new Place(getString(R.string.bungee_jump), "ul. Ostatnia 20", R.drawable.atr4));
+        place.add(new Place(getString(R.string.luna_park), getString(R.string.ul_galgana_grzegorzka1), R.drawable.atr1));
+        place.add(new Place(getString(R.string.ballon_flight), getString(R.string.ul_most_grunwaldzki2), R.drawable.atr2));
+        place.add(new Place(getString(R.string.zoo), getString(R.string.ul_pawia8zurawia5), R.drawable.atr3));
+        place.add(new Place(getString(R.string.bungee_jump), getString(R.string.ul_Ostatnia20), R.drawable.atr4));
 
         PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
         ListView listView = places_list.findViewById(R.id.list);

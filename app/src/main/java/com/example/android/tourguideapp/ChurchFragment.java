@@ -35,10 +35,10 @@ public class ChurchFragment extends Fragment {
         map.setImageResource(R.drawable.map_church);
 
         ArrayList<Place> place = new ArrayList<Place>();
-        place.add(new Place("Świętej Trójcy", "pl. Marszałka Piłsudksiego 3", R.drawable.church1));
-        place.add(new Place("Kościół Wizytek", "ul. Wiślana 78", R.drawable.church2));
-        place.add(new Place("św. Michała Archanioła","ul. Warszawska 34", R.drawable.church3));
-        place.add(new Place("Ewangelicko-Augsburski", "ul. Gromu 250", R.drawable.church4));
+        place.add(new Place(getString(R.string.swietej_trojcy), getString(R.string.pl_marszalka_pilsudksiego3), R.drawable.church1));
+        place.add(new Place(getString(R.string.kosciol_wizytek), getString(R.string.ul_wislana78), R.drawable.church2));
+        place.add(new Place(getString(R.string.sw_michała_archaniola),getString(R.string.ul_warszawska34), R.drawable.church3));
+        place.add(new Place(getString(R.string.ewangelicko_augsburski), getString(R.string.ul_gromu250), R.drawable.church4));
 
         PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
         ListView listView = places_list.findViewById(R.id.list);

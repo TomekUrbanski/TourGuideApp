@@ -35,10 +35,10 @@ public class MonumentFragment extends Fragment {
         map.setImageResource(R.drawable.map_monuments);
 
         ArrayList<Place> place = new ArrayList<Place>();
-        place.add(new Place("Wolności", "ul. Wolności 3", R.drawable.mon1));
-        place.add(new Place("Pomnik na Wzgórzu Kaim", "ul. Na Wzgórzu 1", R.drawable.mon2));
-        place.add(new Place("Chwała Saperom", "ul. Żołnierzy Wyklętych 67", R.drawable.mon3));
-        place.add(new Place("Tysiąclecia jazdy Polskiej", "pl. Uni Lubelskiej", R.drawable.mon4));
+        place.add(new Place(getString(R.string.wolnosci), getString(R.string.ul_wlnosci3), R.drawable.mon1));
+        place.add(new Place(getString(R.string.pomnik_na_wzgorzu_kaim), getString(R.string.ul_na_wzgorzu1), R.drawable.mon2));
+        place.add(new Place(getString(R.string.chwala_saperom), getString(R.string.ul_zołnierzy_wykletych67), R.drawable.mon3));
+        place.add(new Place(getString(R.string.tysiaclecia_jazdy_polskiej), getString(R.string.pl_uni_lubelskiej), R.drawable.mon4));
 
         PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
         ListView listView = places_list.findViewById(R.id.list);

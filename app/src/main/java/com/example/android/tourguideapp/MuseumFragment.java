@@ -39,10 +39,10 @@ public class MuseumFragment extends Fragment {
 
 
         ArrayList<Place> place = new ArrayList<Place>();
-        place.add(new Place(getString(R.string.m_JanaPawłaII), "ul. Wojska Polskeigo 33", R.drawable.mon1));
-        place.add(new Place(getString(R.string.m_poniatowskich), "ul. Uszczerbku 2", R.drawable.mon2));
-        place.add(new Place(getString(R.string.m_polish_jews), "ul. Maduleńskiego 120", R.drawable.mon3));
-        place.add(new Place(getString(R.string.m_warsaw_uprising), "ul. Gerdorobiana 1c", R.drawable.mon4));
+        place.add(new Place(getString(R.string.m_JanaPawłaII), getString(R.string.ul_wojska_polskiego33), R.drawable.mon1));
+        place.add(new Place(getString(R.string.m_poniatowskich), getString(R.string.ul_uszczerbku2), R.drawable.mon2));
+        place.add(new Place(getString(R.string.m_polish_jews), getString(R.string.ul_madulenskiego120), R.drawable.mon3));
+        place.add(new Place(getString(R.string.m_warsaw_uprising), getString(R.string.ul_garderobiana1c), R.drawable.mon4));
 
         final PlaceAdapter itemsAdapter = new PlaceAdapter(getActivity(), place);
         final ListView listView = places_list.findViewById(R.id.list);
